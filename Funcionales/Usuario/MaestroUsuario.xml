@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<MaestroUsuario>
+  <Campos Nombre="Nombre"             Requerido="true"    Mensaje="Nombre Completo"         TipoValor="TEXTO" TipoControl="Html"  Control="input"           Identificador="txtNombre" />
+  <Campos Nombre="PrimerNombre"       Requerido="true"    Mensaje="Primer Nombre"           TipoValor="TEXTO" TipoControl="Html"  Control="input"           Identificador="txtPrimerNombre" />
+  <Campos Nombre="SegundoNombre"      Requerido="false"   Mensaje="Segundo Nombre"          TipoValor="TEXTO" TipoControl="Html"  Control="input"           Identificador="txtSegundoNombre" />
+  <Campos Nombre="PrimerApellido"     Requerido="true"    Mensaje="Primer Apellido"         TipoValor="TEXTO" TipoControl="Html"  Control="input"           Identificador="txtPrimerApellido" />
+  <Campos Nombre="SegundoApellido"    Requerido="false"   Mensaje="Segundo Apellido"        TipoValor="TEXTO" TipoControl="Html"  Control="input"           Identificador="txtSegundoApellido" />
+  <Campos Nombre="Correo"             Requerido="false"   Mensaje="Correo"                  TipoValor="TEXTO" TipoControl="Html"  Control="input"           Identificador="txtCorreo" />
+  <Campos Nombre="Cargo"              Requerido="true"    Mensaje="Cargo"                   TipoValor="TEXTO" TipoControl="kendo" Control="kendoComboBox"   Identificador="txtCargo" />
+  <Campos Nombre="Usuario"            Requerido="true"    Mensaje="Usuario"                 TipoValor="TEXTO" TipoControl="Html"  Control="input"           Identificador="txtUsuario" />
+  <Campos Nombre="Password"           Requerido="true"    Mensaje="Password"                TipoValor="TEXTO" TipoControl="Html"  Control="input"           Identificador="txtPassword" />
+  <Campos Nombre="Identificacion"     Requerido="false"    Mensaje="Identificacion"          TipoValor="REAL" TipoControl="Html"  Control="input"           Identificador="txtIdentificacion" />
+  <Campos Nombre="TipoIdentificacion" Requerido="true"    Mensaje="Tipo de Id"              TipoValor="TEXTO" TipoControl="kendo" Control="kendoComboBox"   Identificador="txtTipoIdentificacion" />
+  <Campos Nombre="Imagen"             Requerido="false"   Mensaje="Firma"                   TipoValor="TEXTO" TipoControl="Html"  Control="img"             Identificador="input_Imagen" />
+  <Campos Nombre="Estado"             Requerido="false"   Mensaje="Estado"                  TipoValor="TEXTO" TipoControl="Html"  Control="checkbox"        Identificador="txtEstado" />
+</MaestroUsuario>

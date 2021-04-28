@@ -1,0 +1,13 @@
+﻿html, body {
+    background-color: rgb(244, 245, 245);
+    font-family: Open Sans, sans-serif;
+}
+
+.ui-widget-header {
+    background: none !important;
+}
+
+
+.fondo {
+    background-color: rgb(244, 245, 245);
+}

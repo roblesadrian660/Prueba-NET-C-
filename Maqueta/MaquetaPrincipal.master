@@ -1,0 +1,237 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="MaquetaPrincipal.master.cs" Inherits="Maqueta_MaquetaPrincipal" %>
+
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head runat="server">
+    <title>Biblioteca</title>
+    <!-- Meta -->
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+    <link rel="icon" href="../Assets/Imagenes/Logo.png" />
+
+    <%--    <link href="../Assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="../Assets/vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" />
+    <link href="../Assets/vendor/linearicons/style.css" rel="stylesheet" />
+    <link href="../Assets/vendor/Theme/css/custom-theme/jquery-ui-1.9.2.custom.css" rel="stylesheet" />
+    <link href="../Assets/Style/main.css" rel="stylesheet" />
+    <link href="../Assets/Style/demo.css" rel="stylesheet" />--%>
+
+    
+    <link href="../Assets/lib/bootstrap/css/bootstrap.css" rel="stylesheet" />
+    <link href="../Assets/lib/font-awesome/css/font-awesome.css" rel="stylesheet" />
+    <link href="../Assets/Style/style.css" rel="stylesheet" />
+    <link href="../Assets/Style/style-responsive.css" rel="stylesheet" />
+    <link href="../Assets/vendor/Theme/css/custom-theme/jquery-ui-1.9.2.custom.css" rel="stylesheet" />
+
+
+    <%--    <script language="javascript" type="text/javascript" src="Assets/vendor/Theme/js/jquery-1.8.3.js"></script>
+        <script type="text/javascript" src="Assets/Scripts/Maqueta.js"></script>
+    <script language="javascript" type="text/javascript" src="Assets/vendor/Theme/js/jquery-ui-1.9.2.custom.js"></script>
+    <script language="javascript" type="text/javascript" src="Assets/vendor/jquery/jquery.min.js"></script>
+    <script language="javascript" type="text/javascript" src="Assets/vendor/bootstrap/js/bootstrap.min.js"></script>
+    <script language="javascript" type="text/javascript" src="Assets/vendor/jquery-slimscroll/jquery.slimscroll.min.js"></script>--%>
+
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body onload="onload();">
+    <%-- <div id="wrapper">
+
+        <nav class="navbar navbar-default navbar-fixed-top">
+            <div class="brand">
+                <a href="#"><font size=4>aa</font></a>
+            </div>
+            <div class="container-fluid">
+                <div class="navbar-btn">
+                    <button type="button" class="btn-toggle-fullwidth"><i class="lnr lnr-arrow-left-circle"></i></button>
+                </div>
+
+                <div id="navbar-menu">
+                    <ul class="nav navbar-nav navbar-right">
+                        <li class="dropdown">
+                            <a href="#" class="dropdown-toggle icon-menu" data-toggle="dropdown">
+                                <i class="lnr lnr-alarm"></i>
+                                <span class="badge bg-danger">1</span>
+                            </a>
+                            <ul class="dropdown-menu notifications">
+                                <li><a href="#" class="notification-item"><span class="dot bg-success"></span>Your request has been approved</a></li>
+                                <li><a href="#" class="more">Notificaciones</a></li>
+                            </ul>
+                        </li>
+                        <li class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown"><img src="assets/Imagenes/user.png" class="img-circle" alt="Avatar"> <span>Samuel</span> <i class="icon-submenu lnr lnr-chevron-down"></i></a>
+                            <ul class="dropdown-menu">
+                                <li><a href="#"><i class="lnr lnr-user"></i> <span>Mi Prefil</span></a></li>
+                                <li><a href="#"><i class="lnr lnr-cog"></i> <span>Configuracion</span></a></li>
+                                <li><a href="#"><i class="lnr lnr-exit"></i> <span>Cerrar sesión</span></a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
+        <div id="sidebar-nav" class="sidebar">
+            <div class="sidebar-scroll">
+                <nav>
+                    <ul class="nav">
+                        <li><a href="#"  onclick="abrirInterfaz('Inicio.aspx','','Bienvenidos','TabSi');" ><i class="lnr lnr-home"></i> <span>Dashboard</span></a></li>
+                        
+                        <li><a href="#" onclick="abrirInterfaz('MaestroUsuario.aspx','Funcionales/Usuario','Usuario','TabSi');" ><i class="lnr lnr-home"></i> <span>Usuario</span></a></li>
+
+                        <li>
+                            <a href="#subPages" data-toggle="collapse" class="collapsed"><i class="lnr lnr-file-empty"></i> <span>Usuarios</span> <i class="icon-submenu lnr lnr-chevron-left"></i></a>
+                            <div id="subPages" class="collapse ">
+                                <ul class="nav">
+                                    <li><a href="page-lockscreen.html" class="">Lockscreen</a></li>
+                                </ul>
+                            </div>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+
+        <div class="main">
+            <div class="main-content">
+                <div class="container-fluid">
+                    <asp:ContentPlaceHolder id="ContentPlaceHolder1" runat="server">
+                    </asp:ContentPlaceHolder>
+                </div>
+            </div>
+        </div>
+        <div class="clearfix"></div>
+        <footer>
+            <div class="container-fluid">
+                <p class="copyright">&copy; 2017 <a href="#" target="_blank">Theme I Need</a>. All Rights Reserved.</p>
+            </div>
+        </footer>
+    </div>--%>
+
+    <section id="container">
+        <!-- **********************************************************************************************************************************************************
+        TOP BAR CONTENT & NOTIFICATIONS
+        *********************************************************************************************************************************************************** -->
+        <!--header start-->
+        <header class="header black-bg">
+            <div class="sidebar-toggle-box">
+                <div class="fa fa-bars" ></div>
+            </div>
+            <!--logo start-->
+            <a href="#" class="logo"><b>BIBLIOTE<span>CA</span></b></a>
+            <!--logo end-->
+            <div class="nav notify-row" id="top_menu">
+                <!--  notification start -->
+                <ul class="nav top-menu">
+                    <!-- notification dropdown start-->
+                    <li id="header_notification_bar" class="dropdown">
+                        <a data-toggle="dropdown" class="dropdown-toggle" href="#">
+                            <i class="fa fa-bell-o"></i>
+                            <span class="badge bg-warning">7</span>
+                        </a>
+                        <ul class="dropdown-menu extended notification">
+                            <div class="notify-arrow notify-arrow-yellow"></div>
+                            <li>
+                                <p class="yellow">You have 7 new notifications</p>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <span class="label label-success"><i class="fa fa-plus"></i></span>
+                                    New User Registered.
+                  <span class="small italic">3 hrs.</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">See all notifications</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <!-- notification dropdown end -->
+                </ul>
+                <!--  notification end -->
+            </div>
+            <div class="top-menu">
+                <ul class="nav pull-right top-menu">
+                    <li><a class="logout" href="#">Logout</a></li>
+                </ul>
+            </div>
+        </header>
+        <!--header end-->
+        <!-- **********************************************************************************************************************************************************
+        MAIN SIDEBAR MENU
+        *********************************************************************************************************************************************************** -->
+        <!--sidebar start-->
+        <aside>
+            <div id="sidebar" class="nav-collapse ">
+                <!-- sidebar menu start-->
+                <ul class="sidebar-menu" id="nav-accordion">
+                    <p class="centered">
+                        <a href="profile.html">
+                            <img src="img/ui-sam.jpg" class="img-circle" width="80"></a>
+                    </p>
+                    <h5 class="centered">Sam Soffes</h5>
+                    <li class="mt">
+                        <a class="active" href="#" onclick="abrirInterfaz('Inicio.aspx','','Bienvenidos','TabSi');">
+                            <i class="fa fa-dashboard"></i>
+                            <span>Dashboard</span>
+                        </a>
+                    </li>
+                    <li class="sub-menu">
+                        <a class="" href="#" onclick="abrirInterfaz('MaestroUsuario.aspx','Funcionales/Usuario','Usuario','TabSi');">
+                            <i class="fa fa-users"></i>
+                            <span>Usuarios</span>
+                        </a>
+                    </li>
+                    <li class="sub-menu">
+                        <a href="javascript:;">
+                            <i class="fa fa-book"></i>
+                            <span>Extra Pages</span>
+                        </a>
+                        <ul class="sub">
+                            <li><a href="#">Blank Page</a></li>
+                        </ul>
+                    </li>
+                </ul>
+                <!-- sidebar menu end-->
+            </div>
+        </aside>
+        <!--sidebar end-->
+        <!-- **********************************************************************************************************************************************************
+        MAIN CONTENT
+        *********************************************************************************************************************************************************** -->
+        <!--main content start-->
+        <section id="main-content">
+            <section class="wrapper">
+                <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+                </asp:ContentPlaceHolder>
+            </section>
+            <!--footer start-->
+            <footer class="site-footer">
+                <div class="text-center">
+                    <p>
+                        &copy; Copyrights <strong>Adrian</strong>. All Rights Reserved
+                    </p>
+                </div>
+            </footer>
+            <!--footer end-->
+
+        </section>
+        <!--main content end-->
+
+    </section>
+    <script type="text/javascript" src="Assets/lib/jquery/jquery.min.js"></script>
+    <script type="text/javascript" src="Assets/lib/bootstrap/js/bootstrap.js"></script>
+    <script class="include" type="text/javascript" src="Assets/lib/jquery.dcjqaccordion.2.7.js"></script>
+    <script type="text/javascript" src="Assets/lib/jquery.scrollTo.min.js"></script>
+    <script type="text/javascript" src="Assets/lib/jquery.nicescroll.js"></script>
+    <script type="text/javascript" src="Assets/lib/common-scripts.js"></script>
+    <script type="text/javascript" src="Assets/lib/gritter/js/jquery.gritter.js"></script>
+    <script type="text/javascript" src="Assets/lib/gritter-conf.js"></script>
+
+    <%--<script type="text/javascript" src="Assets/vendor/Theme/js/jquery-1.8.3.js"></script>--%>
+    <script type="text/javascript" src="Assets/vendor/Theme/js/jquery-ui-1.9.2.custom.js"></script>
+    <script type="text/javascript" src="Assets/Scripts/Principal/Principal.js"></script>
+</body>
+</html>
